@@ -1,10 +1,38 @@
 import React from "react";
-import GenreButton from "./GenreButton";
+import GenreButton from "../components/GenreButton";
+import { useNavigate } from "react-router-dom";
+
+const genres = [
+  "Fiction",
+  "Drama",
+  "Humar",
+  "Politics",
+  "Philosophy",
+  "History",
+  "Adventure",
+];
 
 const GenrePage = () => {
+  const navigate = useNavigate();
+
+  const handleGenreClick = (genre) => {
+    navigate(`/genre/${genre}`);
+  };
+
   return (
-    <div>
-      <GenreButton />
+    <div className="genre-page">
+      <div className="intro">
+        <h1>My Books</h1>
+        <p>
+          A social cataloging website that allows you to freely search its
+          database of books, annotations, and reviews.
+        </p>
+      </div>
+      <div className="genre-buttons">
+        {genres.map((genre) => (
+          <GenreButton key={genre} genre={genre} onClick={handleGenreClick} />
+        ))}
+      </div>
     </div>
   );
 };
