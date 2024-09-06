@@ -6,8 +6,10 @@ const GenreButton = ({ genre, onClick }) => {
 
   return (
     <div className="genre-button" onClick={() => onClick(genre)}>
-      <img src={imageSrc} alt={genre} className="genre-icon" />
-      {genre}
+      <div className="genre-icon-group">
+        <img src={imageSrc} alt={genre} className="genre-icon" />
+        {genre}
+      </div>
       <img src={nextArrow} alt="Next arrow icon" className="next-icon" />
     </div>
   );
