@@ -29,8 +29,12 @@ const GenrePage = () => {
         </p>
       </div>
       <div className="genre-buttons">
-        {genres.map((genre) => (
-          <GenreButton key={genre} genre={genre} onClick={handleGenreClick} />
+        {genres.map((genre, index) => (
+          <GenreButton
+            key={genre + index}
+            genre={genre}
+            onClick={handleGenreClick}
+          />
         ))}
       </div>
     </div>
