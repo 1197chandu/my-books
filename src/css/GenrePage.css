@@ -1,0 +1,31 @@
+.genre-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+@media screen and (min-width: 768px) {
+  .genre-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.intro {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .intro {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    max-width: 700px;
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { nextArrow } from "../utils/constants";
+import "../css/GenreButton.css";
 
 const GenreButton = ({ genre, onClick }) => {
   const imageSrc = process.env.PUBLIC_URL + `/images/${genre}.svg`;

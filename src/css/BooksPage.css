@@ -1,0 +1,44 @@
+.book-page .genre {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .book-page .genre {
+    font-size: 48px;
+  }
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.back-icon {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.search-bar {
+  background-color: #f0f0f6;
+  display: block;
+  margin: 0 20px;
+  padding: 10px;
+  width: 80%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .search-bar {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search-bar {
+    width: 95%;
+  }
+}

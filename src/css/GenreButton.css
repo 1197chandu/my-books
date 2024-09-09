@@ -1,0 +1,44 @@
+.genre-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #f0f0f6;
+  box-shadow: 0 2px 5px rgba(211, 209, 238, 0.5);
+  border-radius: 4px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .genre-button {
+    max-width: 400px;
+  }
+}
+
+.genre-button:hover {
+  background-color: #f8f7ff;
+}
+
+.genre-button img.genre-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.genre-button img.next-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}
+
+.genre-icon-group {
+  display: flex;
+}

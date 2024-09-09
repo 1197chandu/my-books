@@ -1,0 +1,34 @@
+.book-link {
+  color: black;
+  text-decoration: none;
+}
+
+.book-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(211, 209, 238, 0.5);
+  text-align: center;
+  min-height: 250px;
+  max-height: 250px;
+}
+
+.book-image {
+  height: 162px;
+  width: 114px;
+}
+
+.book-title {
+  font-size: 12px;
+  font-weight: 600;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  font-size: 12px;
+  color: #a0a0a0;
+}

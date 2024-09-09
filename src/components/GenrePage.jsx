@@ -1,16 +1,8 @@
 import React from "react";
 import GenreButton from "../components/GenreButton";
 import { useNavigate } from "react-router-dom";
-
-const genres = [
-  "Fiction",
-  "Drama",
-  "Humar",
-  "Politics",
-  "Philosophy",
-  "History",
-  "Adventure",
-];
+import { genres } from "../utils/constants";
+import "../css/GenrePage.css";
 
 const GenrePage = () => {
   const navigate = useNavigate();

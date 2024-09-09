@@ -7,6 +7,7 @@ import { BASE_URL, backArrow } from "../utils/constants";
 import NoResults from "./NoResults";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from "./Loader";
+import "../css/BooksPage.css";
 
 const BooksPage = () => {
   const { genre } = useParams();
@@ -15,6 +16,7 @@ const BooksPage = () => {
   const { books, next, status } = useSelector((state) => state.books);
   const [query, setQuery] = useState("");
   const [hasMore, setHasMore] = useState(true);
+  console.log(books);
 
   useEffect(() => {
     if (query) {
@@ -25,7 +27,7 @@ const BooksPage = () => {
   }, [genre, query]);
 
   // Function to fetch more books when scrolling
-  const fetchMoreBooks = () => {
+  const fetchMoreBooks = async () => {
     if (next) {
       const str = next;
       const queryString = str.split("?")[1] ? `?${str.split("?")[1]}` : "";
@@ -65,12 +67,11 @@ const BooksPage = () => {
         dataLength={books.length}
         next={fetchMoreBooks}
         hasMore={hasMore}
-        loader={status === "loading" && books.length > 0 ? <Loader /> : null}
+        loader={status === "loading" ? <Loader /> : null}
         endMessage={<p>No more books to display</p>}
       >
         <div className="book-list">
-          {status === "succeeded" &&
-            books &&
+          {books &&
             books.map((book, index) => (
               <BookCards key={book + index} book={book} />
             ))}

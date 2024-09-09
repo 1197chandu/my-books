@@ -1,5 +1,6 @@
 import React from "react";
 import { noResultIcon } from "../utils/constants";
+import "../css/NoResults.css";
 
 const NoResults = () => {
   return (

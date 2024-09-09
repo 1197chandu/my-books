@@ -5,12 +5,11 @@ import { BASE_URL } from "../utils/constants";
 export const getBooksByGenre = createAsyncThunk(
   "books/getByGenre",
   async ({ genre, url }) => {
-    console.log(genre);
     try {
       const apiUrl = url || `${BASE_URL}?topic=${genre}&mime_type=image`;
       const response = await fetch(apiUrl);
-      const data = await response.json();
-      return data;
+      const jsonData = await response.json();
+      return jsonData;
     } catch (error) {
       return error;
     }
