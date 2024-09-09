@@ -24,7 +24,7 @@ const BooksPage = () => {
     } else {
       dispatch(getBooksByGenre({ genre, url: null }));
     }
-  }, [genre, query]);
+  }, [dispatch, genre, query]);
 
   // Function to fetch more books when scrolling
   const fetchMoreBooks = async () => {
